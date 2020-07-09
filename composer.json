@@ -1,0 +1,17 @@
+{
+    "name": "bxy/helper",
+    "description": "工具库",
+    "type": "library",
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.17@dev",
+        "phpstan/phpstan": "^0.12.0@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "boss",
+            "email": "807098383@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
