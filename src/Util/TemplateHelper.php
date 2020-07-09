@@ -1,6 +1,6 @@
 <?php
 
-namespace  Bxy\Jwt\helper\Util;
+namespace  Bxy\Helper\Util;
 
 /**
  * Basic template engine used for generating initial Cept/Cest/Test files.

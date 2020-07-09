@@ -6,8 +6,7 @@
  * Time: 下午1:17
  */
 
-namespace  Bxy\Jwt\helper\Directory;
-
+namespace  Bxy\Helper\Directory;
 
 class DirectoryHelper
 {
@@ -74,7 +73,6 @@ class DirectoryHelper
         } else {
             return $isDelete ? self::delDir($dir) : true;
         }
-
     }
 
     /**
@@ -109,19 +107,19 @@ class DirectoryHelper
             if ($file !== '.' && $file !== '..') {
                 $fullPath = $path . '/' . $file;
                 if (is_link($fullPath)) {
-                    return FALSE;
+                    return false;
                 } elseif (!is_dir($fullPath) && !@chmod($fullPath, $chmod)) {
-                    return FALSE;
+                    return false;
                 } elseif (!self::chmod($fullPath, $chmod)) {
-                    return FALSE;
+                    return false;
                 }
             }
         }
         closedir($dh);
         if (@chmod($path, $chmod)) {
-            return TRUE;
+            return true;
         } else {
-            return FALSE;
+            return false;
         }
     }
 
@@ -181,5 +179,4 @@ class DirectoryHelper
         }
         return false;
     }
-
 }

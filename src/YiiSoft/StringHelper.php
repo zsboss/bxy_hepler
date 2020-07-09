@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bxy\Jwt\helper\YiiSoft;
+namespace Bxy\Helper\YiiSoft;
 
 use function array_slice;
 use function htmlspecialchars;
@@ -444,4 +444,3 @@ class StringHelper
         return $value === '' || $value === [] || $value === null || is_string($value) && trim($value) === '';
     }
 }
-

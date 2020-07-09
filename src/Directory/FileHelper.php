@@ -6,7 +6,7 @@
  * Time: 下午3:15
  */
 
-namespace  Bxy\Jwt\helper\Directory;
+namespace  Bxy\Helper\Directory;
 
 /**
  * Class FileHelper
@@ -96,7 +96,6 @@ class FileHelper
                     $head = true;
                     break;
                 }
-
             }
             array_unshift($lines, fgets($fp));
             if ($head) {
@@ -142,5 +141,4 @@ class FileHelper
         FileHelper::putFile($file, FileHelper::getFile($url));
         return $file;
     }
-
 }

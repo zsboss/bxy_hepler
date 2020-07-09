@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Bxy\Jwt\helper\YiiSoft;
+namespace Bxy\Helper\YiiSoft;
 
-use Lengbin\Helper\YiiSoft\Arrays\ArrayableInterface;
+use Bxy\Helper\YiiSoft\Arrays\ArrayableInterface;
 
 /**
  * VarDumper is intended to replace the PHP functions var_dump and print_r.

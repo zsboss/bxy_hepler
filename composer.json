@@ -9,5 +9,10 @@
             "email": "807098383@qq.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Bxy\\Helper\\": "src/"
+        }
+    },
 }

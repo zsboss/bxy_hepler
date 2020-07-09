@@ -6,11 +6,11 @@
  * Time: 上午10:34
  */
 
-namespace  Bxy\Jwt\helper\Util;
+namespace  Bxy\Helper\Util;
 
-use Lengbin\Helper\Directory\DirectoryHelper;
-use Lengbin\Helper\Directory\FileHelper;
-use Lengbin\Helper\Directory\ReadDirHelper;
+use Bxy\Helper\Directory\DirectoryHelper;
+use Bxy\Helper\Directory\FileHelper;
+use Bxy\Helper\Directory\ReadDirHelper;
 
 /**
  * Class ZipHelper
@@ -156,10 +156,10 @@ class ZipHelper
         }
 
         if (!empty($files)) {
-            foreach ($files as $file){
-                if(is_dir($file)){
+            foreach ($files as $file) {
+                if (is_dir($file)) {
                     DirectoryHelper::emptyDir($file, true);
-                }else{
+                } else {
                     @unlink($file);
                 }
             }
@@ -205,9 +205,9 @@ class ZipHelper
                 throw new \Exception('this file [' . $val . '] not support zip！');
             }
             foreach ($files as $f) {
-                if(!empty($dirName)){
+                if (!empty($dirName)) {
                     $zip->addFile($f, $dirName . '/' . basename($f));
-                }else{
+                } else {
                     $zip->addFile($f, basename($f));
                 }
             }
@@ -270,6 +270,5 @@ class ZipHelper
         if ($this->_isDelete) {
             $this->deleteFile($file);
         }
-
     }
 }

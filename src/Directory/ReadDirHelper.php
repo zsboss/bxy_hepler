@@ -6,7 +6,7 @@
  * Time: 下午11:24
  */
 
-namespace  Bxy\Jwt\helper\Directory;
+namespace  Bxy\Helper\Directory;
 
 /**
  * 读取目录帮助类，

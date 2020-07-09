@@ -2,10 +2,10 @@
 
 
 
-namespace  Bxy\Jwt\helper\Util;
+namespace  Bxy\Helper\Util;
 
-use  Bxy\Jwt\YiiSoft\Arrays\ArrayHelper;
-use  Bxy\Jwt\YiiSoft\StringHelper;
+use Bxy\Helper\YiiSoft\Arrays\ArrayHelper;
+use Bxy\Helper\YiiSoft\StringHelper;
 
 /**
  * Class FormatHelper

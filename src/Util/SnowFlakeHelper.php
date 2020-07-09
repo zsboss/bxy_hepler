@@ -1,7 +1,6 @@
 <?php
 
-namespace  Bxy\Jwt\helper\Util;
-
+namespace  Bxy\Helper\Util;
 
 abstract class SnowFlakeHelper
 {

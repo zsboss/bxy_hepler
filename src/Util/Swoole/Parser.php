@@ -1,6 +1,6 @@
 <?php
 
-namespace  Bxy\Jwt\helper\Util\Swoole;
+namespace  Bxy\Helper\Util\Swoole;
 
 /**
  * Class ExtParser

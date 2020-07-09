@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bxy\Jwt\helper\YiiSoft\Arrays;
+namespace Bxy\Helper\YiiSoft\Arrays;
 
 /**
  * Object that represents the removal of array value while performing [[ArrayHelper::merge()]].

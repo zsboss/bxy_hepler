@@ -1,6 +1,6 @@
 <?php
 
-namespace  Bxy\Jwt\helper\Util;
+namespace  Bxy\Helper\Util;
 
 class RegularHelper
 {
@@ -31,7 +31,7 @@ class RegularHelper
     public static function checkImage($url)
     {
         $rule = "/((http|https):\/\/)?\w+\.(jpg|jpeg|gif|png)/";
-        preg_match($rule,$url,$result);
+        preg_match($rule, $url, $result);
         return $result;
     }
 }

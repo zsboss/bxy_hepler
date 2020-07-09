@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Bxy\Jwt\helper\YiiSoft\Arrays;
+namespace Bxy\Helper\YiiSoft\Arrays;
 
 use \InvalidArgumentException;
-use  Bxy\Jwt\helper\YiiSoft\StringHelper;
+use Bxy\Helper\YiiSoft\StringHelper;
 
 /**
  * Yii array helper provides static methods allowing you to deal with arrays more efficiently.

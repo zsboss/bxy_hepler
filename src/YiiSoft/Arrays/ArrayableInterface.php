@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bxy\Jwt\helper\YiiSoft\Arrays;
+namespace Bxy\Helper\YiiSoft\Arrays;
 
 /**
  * ArrayableInterface should be implemented by classes who want to support customizable representation of their instances.
