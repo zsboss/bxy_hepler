@@ -16,8 +16,8 @@ class Time
     public static function today()
     {
         return [
-            mktime(0, 0, 0, date('m'), date('d'), date('Y')),
-            mktime(23, 59, 59, date('m'), date('d'), date('Y'))
+            mktime(0, 0, 0, (int)date('n'), (int)date('j'), (int)date('Y')),
+            mktime(23, 59, 59, (int)date('n'), (int)date('j'), (int)date('Y'))
         ];
     }
     
@@ -30,8 +30,8 @@ class Time
     {
         $yesterday = date('d') - 1;
         return [
-            mktime(0, 0, 0, date('m'), $yesterday, date('Y')),
-            mktime(23, 59, 59, date('m'), $yesterday, date('Y'))
+            mktime(0, 0, 0, (int)date('n'), (int)$yesterday, (int)date('Y')),
+            mktime(23, 59, 59, (int)date('n'), (int)$yesterday, (int)date('Y'))
         ];
     }
     
@@ -71,8 +71,8 @@ class Time
     public static function month($everyDay = false)
     {
         return [
-            mktime(0, 0, 0, date('m'), 1, date('Y')),
-            mktime(23, 59, 59, date('m'), date('t'), date('Y'))
+            mktime(0, 0, 0, (int)date('n'), 1, (int)date('Y')),
+            mktime(23, 59, 59, (int)date('n'), (int)date('t'), (int)date('Y'))
         ];
     }
     
@@ -83,8 +83,8 @@ class Time
      */
     public static function lastMonth()
     {
-        $begin = mktime(0, 0, 0, date('m') - 1, 1, date('Y'));
-        $end = mktime(23, 59, 59, date('m') - 1, date('t', $begin), date('Y'));
+        $begin = mktime(0, 0, 0, (int)date('n') - 1, 1, (int)date('Y'));
+        $end = mktime(23, 59, 59, (int)date('n') - 1, (int)date('t', $begin), (int)date('Y'));
         
         return [$begin, $end];
     }
@@ -97,8 +97,8 @@ class Time
     public static function year()
     {
         return [
-            mktime(0, 0, 0, 1, 1, date('Y')),
-            mktime(23, 59, 59, 12, 31, date('Y'))
+            mktime(0, 0, 0, 1, 1, (int)date('Y')),
+            mktime(23, 59, 59, 12, 31, (int)date('Y'))
         ];
     }
     
@@ -109,7 +109,7 @@ class Time
      */
     public static function lastYear()
     {
-        $year = date('Y') - 1;
+        $year = (int)date('Y') - 1;
         return [
             mktime(0, 0, 0, 1, 1, $year),
             mktime(23, 59, 59, 12, 31, $year)
@@ -136,7 +136,7 @@ class Time
         }
         
         return [
-            mktime(0, 0, 0, date('m'), date('d') - $day, date('Y')),
+            mktime(0, 0, 0, (int)date('n'), (int)date('d') - $day, (int)date('Y')),
             $end
         ];
     }
