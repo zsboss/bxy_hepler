@@ -6,7 +6,7 @@ namespace  Bxy\Helper\Directory;
 
 
 
-class Time
+class TimeHelper
 {
     /**
      * 返回今日开始和结束的时间戳
