@@ -92,12 +92,14 @@ class DateHelper
      *
      * @return string
      */
-    public static function second2time(int $second = 0): string
+    public static function second2time(int $second = 0)
     {
         if ($second <= 0) {
             return '';
         }
-
+        $day     = floor($second/86400);
+        $day     = $day?str_pad((string)$day, 2, '0', STR_PAD_LEFT) : 0;
+        $second  = $second%86400;
         $hours   = floor($second / 3600);
         $hours   = $hours ? str_pad($hours, 2, '0', STR_PAD_LEFT) : 0;
         $second  = $second % 3600;
@@ -105,8 +107,8 @@ class DateHelper
         $minutes = str_pad($minutes, 2, '0', STR_PAD_LEFT);
         $seconds = $second % 60;
         $seconds = str_pad($seconds, 2, '0', STR_PAD_LEFT);
-
-        return implode(':', $hours ? compact('hours', 'minutes', 'seconds') : compact('minutes', 'seconds'));
+        return ['day'=>(string)$day,'hours'=>(string)$hours,'minutes'=>(string)$minutes,'seconds'=>(string)$seconds];
+//        return implode(':', $hours ? compact('hours', 'minutes', 'seconds') : compact('minutes', 'seconds'));
     }
 
     /**
