@@ -101,12 +101,12 @@ class DateHelper
         $day     = $day?str_pad((string)$day, 2, '0', STR_PAD_LEFT) : 0;
         $second  = $second%86400;
         $hours   = floor($second / 3600);
-        $hours   = $hours ? str_pad($hours, 2, '0', STR_PAD_LEFT) : 0;
+        $hours   = $hours ? str_pad((string)$hours, 2, '0', STR_PAD_LEFT) : 0;
         $second  = $second % 3600;
         $minutes = floor($second / 60);
-        $minutes = str_pad($minutes, 2, '0', STR_PAD_LEFT);
+        $minutes = str_pad((string)$minutes, 2, '0', STR_PAD_LEFT);
         $seconds = $second % 60;
-        $seconds = str_pad($seconds, 2, '0', STR_PAD_LEFT);
+        $seconds = str_pad((string)$seconds, 2, '0', STR_PAD_LEFT);
         return ['day'=>(string)$day,'hours'=>(string)$hours,'minutes'=>(string)$minutes,'seconds'=>(string)$seconds];
 //        return implode(':', $hours ? compact('hours', 'minutes', 'seconds') : compact('minutes', 'seconds'));
     }
